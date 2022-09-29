@@ -1,4 +1,58 @@
-<h1 class="text-center m-5">HeroesApp</h1>
+<!-- <h1 class="text-center m-5">HeroesApp</h1>
 <hr>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+<mat-sidenav-container fullscreen>
+
+    <mat-sidenav #sidenav mode="push">
+
+        <mat-toolbar color="primary">
+            <h2>Menu </h2>
+            <span class="spacer"></span>
+            <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar>
+
+        <mat-nav-list>
+            <!-- mat list item sirve para alinearla en el sidenav -->
+            <a mat-list-item routerLink="./listado" (click)="sidenav.toggle()">
+                <!-- mat list icon para darle un padding al icono del span -->
+                <mat-icon mat-list-icon>label</mat-icon>
+                <span>Listado de Heroes</span>
+            </a>
+
+            <a mat-list-item routerLink="./agregar" (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>add</mat-icon>
+                <span>Agregar Héroe</span>
+            </a>
+
+            <a mat-list-item routerLink="./buscar" (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>search</mat-icon>
+                <span>Buscar Héroe</span>
+            </a>
+
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-toolbar>
+
+        <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+        </button>
+
+        <span class="spacer"></span>
+
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>logout</mat-icon>
+        </button>
+
+    </mat-toolbar>
+
+    <div class="m-3">
+        <router-outlet></router-outlet>
+    </div>
+
+
+</mat-sidenav-container>
