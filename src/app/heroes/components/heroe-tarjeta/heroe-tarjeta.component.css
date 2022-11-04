@@ -1,7 +1,11 @@
 mat-card {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 mat-icon:hover {
     color: red;
+}
+
+img {
+    height: 80%;
 }

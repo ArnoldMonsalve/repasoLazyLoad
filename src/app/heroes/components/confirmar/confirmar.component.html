@@ -1,0 +1,13 @@
+<div class="text-center ">
+    <h3>¿Estas Seguro de eliminar el Heroe: {{data.superhero}}?</h3>
+    <hr>
+    <button mat-raised-button color="warn" (click)="borrar()">
+      <mat-icon>check</mat-icon>
+  </button>
+
+    <button class="m-2" mat-raised-button (click)="cerrar()" color="primary">
+      <mat-icon><span class="material-symbols-outlined">
+        arrow_back
+        </span></mat-icon>
+    </button>
+</div>
